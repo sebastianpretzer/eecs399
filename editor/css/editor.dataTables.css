@@ -5,31 +5,31 @@ div.DTE div.DTE_Header {
   position: absolute;
   top: 0;
   left: 0;
-  height: 50px;
+  height: 52px;
   width: 100%;
-  background-color: #f3f3f3;
-  border-bottom: 1px solid #ddd;
+  background-color: #e8e9eb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding: 16px 10px 2px 16px;
   font-size: 1.3em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+div.DTE div.DTE_Body {
+  position: relative;
+}
 div.DTE div.DTE_Footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 50px;
+  height: 52px;
   width: 100%;
-  background-color: #f3f3f3;
-  border-top: 1px solid #ddd;
+  background-color: #e8e9eb;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-div.DTE div.DTE_Body {
-  position: relative;
 }
 div.DTE div.DTE_Form_Info {
   margin-bottom: 0.5em;
@@ -51,33 +51,33 @@ div.DTE div.DTE_Form_Buttons button {
   text-align: center;
   display: block;
   margin-top: 0;
-  padding: 5px 15px;
+  padding: 0.5em 1em;
   cursor: pointer;
   float: right;
   margin-left: 0.75em;
+  color: inherit;
   font-size: 14px;
-  text-shadow: 0 1px 0 white;
   border: 1px solid #999;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   -webkit-box-shadow: 1px 1px 3px #ccc;
   -moz-box-shadow: 1px 1px 3px #ccc;
   box-shadow: 1px 1px 3px #ccc;
-  background-color: #f9f9f9 100%;
+  background-color: #dcdcdc;
   /* Fallback */
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #eee 65%, #f9f9f9 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #dcdcdc 100%);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #eee 65%, #f9f9f9 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #dcdcdc 100%);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #ffffff 0%, #eee 65%, #f9f9f9 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #dcdcdc 100%);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #ffffff 0%, #eee 65%, #f9f9f9 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #dcdcdc 100%);
   /* Opera 11.10+ */
-  background-image: linear-gradient(to bottom, #ffffff 0%, #eee 65%, #f9f9f9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#f9f9f9');
+  background-image: linear-gradient(to bottom, #ffffff 0%, #dcdcdc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#dcdcdc');
 }
 div.DTE button.btn:hover,
 div.DTE div.DTE_Form_Buttons button:hover {
@@ -85,18 +85,18 @@ div.DTE div.DTE_Form_Buttons button:hover {
   -webkit-box-shadow: 1px 1px 3px #999;
   -moz-box-shadow: 1px 1px 3px #999;
   box-shadow: 1px 1px 3px #999;
-  background-color: #f4f4f4 100%;
+  background-color: #cccccc;
   /* Fallback */
-  background-image: -webkit-linear-gradient(top, #f3f3f3 0%, #dbdbdb 65%, #f4f4f4 100%);
+  background-image: -webkit-linear-gradient(top, #eaeaea 0%, #cccccc 100%);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #f3f3f3 0%, #dbdbdb 65%, #f4f4f4 100%);
+  background-image: -moz-linear-gradient(top, #eaeaea 0%, #cccccc 100%);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #f3f3f3 0%, #dbdbdb 65%, #f4f4f4 100%);
+  background-image: -ms-linear-gradient(top, #eaeaea 0%, #cccccc 100%);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #f3f3f3 0%, #dbdbdb 65%, #f4f4f4 100%);
+  background-image: -o-linear-gradient(top, #eaeaea 0%, #cccccc 100%);
   /* Opera 11.10+ */
-  background-image: linear-gradient(to bottom, #f3f3f3 0%, #dbdbdb 65%, #f4f4f4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f3f3', EndColorStr='#f4f4f4');
+  background-image: linear-gradient(to bottom, #eaeaea 0%, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eaeaea', EndColorStr='#cccccc');
 }
 div.DTE button.btn:active,
 div.DTE div.DTE_Form_Buttons button:active {
@@ -108,18 +108,18 @@ div.DTE button.btn:focus,
 div.DTE div.DTE_Form_Buttons button:focus {
   border: 1px solid #426c9e;
   text-shadow: 0 1px 0 #c4def1;
-  background-color: #a3d0ef 100%;
+  background-color: #79ace9;
   /* Fallback */
-  background-image: -webkit-linear-gradient(top, #a3d0ef 0%, #79ace9 65%, #a3d0ef 100%);
+  background-image: -webkit-linear-gradient(top, #bddef4 0%, #79ace9 100%);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #a3d0ef 0%, #79ace9 65%, #a3d0ef 100%);
+  background-image: -moz-linear-gradient(top, #bddef4 0%, #79ace9 100%);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #a3d0ef 0%, #79ace9 65%, #a3d0ef 100%);
+  background-image: -ms-linear-gradient(top, #bddef4 0%, #79ace9 100%);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #a3d0ef 0%, #79ace9 65%, #a3d0ef 100%);
+  background-image: -o-linear-gradient(top, #bddef4 0%, #79ace9 100%);
   /* Opera 11.10+ */
-  background-image: linear-gradient(to bottom, #a3d0ef 0%, #79ace9 65%, #a3d0ef 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#a3d0ef', EndColorStr='#a3d0ef');
+  background-image: linear-gradient(to bottom, #bddef4 0%, #79ace9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bddef4', EndColorStr='#79ace9');
   outline: none;
 }
 div.DTE button.btn:focus:after,
@@ -329,7 +329,7 @@ div.DTE_Field_Type_select div.DTE_Field_Input {
 }
 
 div.DTE_Body {
-  padding: 50px 0;
+  padding: 52px 0;
 }
 div.DTE_Body div.DTE_Body_Content {
   position: relative;
@@ -464,20 +464,17 @@ div.DTE_Bubble div.DTE_Bubble_Liner {
   width: 300px;
   margin-left: -150px;
   background-color: white;
-  box-shadow: 2px 2px 7px #555;
-  border-radius: 5px;
-  border: 2px solid #444;
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  border: 1px solid #666;
   padding: 1em;
+  background: #fcfcfc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table {
-  display: table;
   width: 100%;
-}
-div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form {
-  display: table-cell;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content {
   padding: 0;
@@ -490,11 +487,22 @@ div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Con
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field:last-child {
   margin-bottom: 0;
 }
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > label {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div {
+  padding: 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div input {
+  margin: 0;
+}
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons {
-  display: table-cell;
-  vertical-align: bottom;
-  padding: 0 0 0 0.75em;
-  width: 1%;
+  text-align: right;
+  margin-top: 1em;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons button {
+  margin-bottom: 0;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Header {
   border-top-left-radius: 5px;
@@ -543,7 +551,7 @@ div.DTE_Bubble div.DTE_Bubble_Triangle {
   width: 10px;
   top: -6px;
   background-color: white;
-  border: 2px solid #444;
+  border: 1px solid #666;
   border-top: none;
   border-right: none;
   -webkit-transform: rotate(-45deg);
@@ -694,9 +702,8 @@ div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_
   #top: -50%;
   /* IE7 */
   position: relative;
-  border: 7px solid rgba(220, 220, 220, 0.5);
-  box-shadow: 2px 2px 10px #555;
-  border-radius: 10px;
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -704,27 +711,26 @@ div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_
 div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE {
   background: white;
   border-radius: 6px;
-  box-shadow: 0 0 5px #555;
-  border: 2px solid #444;
+  border: 1px solid #666;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE div.DTE_Header {
-  top: 2px;
-  left: 2px;
-  right: 2px;
+  right: 0;
   width: auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE div.DTE_Body_Content {
+  box-sizing: border-box;
+  background: #fcfcfc;
 }
 div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE div.DTE_Footer {
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
+  right: 0;
   width: auto;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTED_Lightbox_Close {
   position: absolute;

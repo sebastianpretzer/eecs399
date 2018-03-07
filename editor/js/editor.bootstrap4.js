@@ -146,11 +146,12 @@ DataTable.Editor.display.bootstrap = $.extend( true, {}, DataTable.Editor.models
 			} );
 		}
 
-		// For each instance we need to know when it is opened
-		dte.on( 'open.dtebs', function ( e, type ) {
-			if ( type === 'inline' || type === 'bubble' ) {
-				$('div.DTE input:not([type=checkbox]):not([type=radio]), div.DTE select, div.DTE textarea').addClass( 'form-control' );
-			}
+		// Add `form-control` to required elements
+		dte.on( 'displayOrder.dtebs', function ( e, display, action, form ) {
+			$.each( dte.s.fields, function ( key, field ) {
+				$('input:not([type=checkbox]):not([type=radio]), select, textarea', field.node() )
+					.addClass( 'form-control' );
+			} );
 		} );
 
 		return self;
@@ -192,9 +193,6 @@ DataTable.Editor.display.bootstrap = $.extend( true, {}, DataTable.Editor.models
 				backdrop: "static",
 				keyboard: false
 			} );
-
-		$('input:not([type=checkbox]):not([type=radio]), select, textarea', self._dom.content)
-			.addClass( 'form-control' );
 	},
 
 	"close": function ( dte, callback ) {

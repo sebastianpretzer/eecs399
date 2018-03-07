@@ -18,19 +18,17 @@ div.DTE_Bubble {
 		width: 300px;
 		margin-left: -150px;
 		background-color: white;
-		box-shadow: 2px 2px 7px #555;
-		border-radius: 5px;
-		border: 2px solid #444;
+		box-shadow: 0 12px 30px 0 rgba(0,0,0,.5);
+		border-radius: 6px;
+		border: 1px solid #666;
 		padding: 1em;
+		background: #fcfcfc;
 		@include box-sizing(border-box);
 
 		div.DTE_Bubble_Table {
-			display: table;
 			width: 100%;
 
 			> form {
-				display: table-cell;
-
 				div.DTE_Form_Content {
 					padding: 0;
 
@@ -42,15 +40,30 @@ div.DTE_Bubble {
 						&:last-child {
 							margin-bottom: 0;
 						}
+
+						> label {
+							padding-top: 0;
+							margin-bottom: 0;
+						}
+
+						> div {
+							padding: 0;
+
+							input {
+								margin: 0;
+							}
+						}
 					}
 				}
 			}
-
+			
 			div.DTE_Form_Buttons {
-				display: table-cell;
-				vertical-align: bottom;
-				padding: 0 0 0 0.75em;
-				width: 1%; // browser will resize to a min width
+				text-align: right;
+				margin-top: 1em;
+
+				button {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -83,7 +96,7 @@ div.DTE_Bubble {
 		width: 10px;
 		top: -6px;
 		background-color: white;
-		border: 2px solid #444;
+		border: 1px solid #666;
 		border-top: none;
 		border-right: none;
 

@@ -129,7 +129,7 @@ div.DTE_Field_Type_select div.DTE_Field_Input {
 }
 
 div.DTE_Body {
-  padding: 50px 0;
+  padding: 52px 0;
 }
 div.DTE_Body div.DTE_Body_Content {
   position: relative;
@@ -264,20 +264,17 @@ div.DTE_Bubble div.DTE_Bubble_Liner {
   width: 300px;
   margin-left: -150px;
   background-color: white;
-  box-shadow: 2px 2px 7px #555;
-  border-radius: 5px;
-  border: 2px solid #444;
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  border: 1px solid #666;
   padding: 1em;
+  background: #fcfcfc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table {
-  display: table;
   width: 100%;
-}
-div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form {
-  display: table-cell;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content {
   padding: 0;
@@ -290,11 +287,22 @@ div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Con
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field:last-child {
   margin-bottom: 0;
 }
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > label {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div {
+  padding: 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div input {
+  margin: 0;
+}
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons {
-  display: table-cell;
-  vertical-align: bottom;
-  padding: 0 0 0 0.75em;
-  width: 1%;
+  text-align: right;
+  margin-top: 1em;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons button {
+  margin-bottom: 0;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Header {
   border-top-left-radius: 5px;
@@ -343,7 +351,7 @@ div.DTE_Bubble div.DTE_Bubble_Triangle {
   width: 10px;
   top: -6px;
   background-color: white;
-  border: 2px solid #444;
+  border: 1px solid #666;
   border-top: none;
   border-right: none;
   -webkit-transform: rotate(-45deg);
@@ -906,4 +914,8 @@ div.DTE div.DTE_Processing_Indicator {
   top: 12px;
   right: 2px;
   font-size: 0.8em;
+}
+div.DTE div.DTE_Form_Buttons {
+  text-align: right;
+  padding: 0;
 }

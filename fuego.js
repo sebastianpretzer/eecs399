@@ -14,8 +14,8 @@ var config = {
     projectId: "eecs-399",
     storageBucket: "eecs-399.appspot.com",
     messagingSenderId: "307775102057"
-};
-firebase.initializeApp(config);
+  };
+  firebase.initializeApp(config);
 
 // Load Firebase data
 var fire_arr = load_fuegobase();
@@ -27,10 +27,11 @@ var sensors_db = fire_arr[3];
 function load_fuegobase() {
     // get firebase reference
     var fire_db_ref = firebase.database().ref();
-
+    //console.log(fire_db_ref)
     // store firebase data locally
     fire_db_ref.on("value", function(data) {
         var temp = data.val();
+        //console.log(temp)
         localStorage.setItem('storage', JSON.stringify(temp));
     });
 
@@ -44,6 +45,8 @@ function load_fuegobase() {
     var sensors_db = fire_db.sensors;
     var facilities_db = fire_db.facilities;
     var rooms_db = fire_db.rooms;
+
+    //console.log(fire_db)
 
     return [fire_db, facilities_db, rooms_db, sensors_db];
 }

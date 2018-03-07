@@ -29,34 +29,33 @@ div.DTED_Lightbox_Wrapper {
 				*top: -50%; /* IE6 */
 				#top: -50%; /* IE7 */
 				position: relative;
-				border: 7px solid rgba(220, 220, 220, 0.5);
-				box-shadow: 2px 2px 10px #555;
-				border-radius: 10px;
+				box-shadow: 0 12px 30px 0 rgba(0,0,0,.5);
+				border-radius: 6px;
 				@include box-sizing(border-box);
 
 				div.DTE {
 					background: white;
 					border-radius: 6px;
-					box-shadow: 0 0 5px #555;
-					border: 2px solid #444;
+					border: 1px solid #666;
 					@include box-sizing(border-box);
 
 					div.DTE_Header {
-						top: 2px;
-						left: 2px;
-						right: 2px;
+						right: 0;
 						width: auto;
-						border-top-left-radius: 5px;
-						border-top-right-radius: 5px;
+						border-top-left-radius: 6px;
+						border-top-right-radius: 6px;
+					}
+					
+					div.DTE_Body_Content {
+						box-sizing: border-box;
+						background: #fcfcfc;
 					}
 
 					div.DTE_Footer {
-						bottom: 2px;
-						left: 2px;
-						right: 2px;
+						right: 0;
 						width: auto;
-						border-bottom-left-radius: 5px;
-						border-bottom-right-radius: 5px;
+						border-bottom-left-radius: 6px;
+						border-bottom-right-radius: 6px;
 					}
 				}
 

@@ -35,6 +35,9 @@ div.DTE_Field:after {
   clear: both;
   visibility: hidden;
 }
+div.DTE_Field div:not([data-dte-e="msg-error"]) {
+  color: inherit;
+}
 
 div.DTE_Inline {
   position: relative;
@@ -139,20 +142,17 @@ div.DTE_Bubble div.DTE_Bubble_Liner {
   width: 300px;
   margin-left: -150px;
   background-color: white;
-  box-shadow: 2px 2px 7px #555;
-  border-radius: 5px;
-  border: 2px solid #444;
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  border: 1px solid #666;
   padding: 1em;
+  background: #fcfcfc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table {
-  display: table;
   width: 100%;
-}
-div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form {
-  display: table-cell;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content {
   padding: 0;
@@ -165,11 +165,22 @@ div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Con
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field:last-child {
   margin-bottom: 0;
 }
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > label {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div {
+  padding: 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div input {
+  margin: 0;
+}
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons {
-  display: table-cell;
-  vertical-align: bottom;
-  padding: 0 0 0 0.75em;
-  width: 1%;
+  text-align: right;
+  margin-top: 1em;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons button {
+  margin-bottom: 0;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Header {
   border-top-left-radius: 5px;
@@ -218,7 +229,7 @@ div.DTE_Bubble div.DTE_Bubble_Triangle {
   width: 10px;
   top: -6px;
   background-color: white;
-  border: 2px solid #444;
+  border: 1px solid #666;
   border-top: none;
   border-right: none;
   -webkit-transform: rotate(-45deg);
@@ -278,18 +289,24 @@ div.DTE_Bubble_Background > div:not([dummy]) {
 div.DTE_Bubble div.DTE_Bubble_Liner {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  padding: 0 0 0.5em 0;
+  padding: 1em;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field label,
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field > div {
   width: 100%;
+  max-width: 100%;
   float: none;
   clear: both;
   text-align: left;
+  flex: none;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table > form div.DTE_Form_Content div.DTE_Field label {
-  padding-bottom: 4px;
+  padding: 0 0 4px 0;
+}
+div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Bubble_Table div.DTE_Form_Buttons {
+  text-align: right;
+  margin-top: 0;
 }
 div.DTE_Bubble div.DTE_Bubble_Liner div.DTE_Header {
   background-color: #f7f7f7;
@@ -690,4 +707,108 @@ table.dataTable tbody tr.noHighlight td {
 div.DTE div.DTE_Processing_Indicator {
   top: 52px;
   right: 12px;
+}
+
+/*
+ * Namespace: DTED - DataTables Editor Display - Envelope
+ */
+div.DTED_Envelope_Wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+  z-index: 11;
+  display: none;
+  overflow: hidden;
+}
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Shadow {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  right: 10px;
+  height: 10px;
+  z-index: 10;
+  box-shadow: 0 0 20px black;
+}
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Container {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  border-left: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 1px solid #777;
+  box-shadow: 3px 3px 10px #555;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+}
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Container div.DTE_Processing_Indicator {
+  right: 36px;
+}
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Container div.DTE_Footer {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Container div.DTED_Envelope_Close {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  *cursor: hand;
+  z-index: 12;
+  text-align: center;
+  font-size: 12px;
+  background: #F8F8F8;
+  background: -webkit-gradient(linear, center bottom, center top, from(#CCC), to(white));
+  background: -moz-linear-gradient(top, white, #CCC);
+  background: linear-gradient(to bottom, white, #CCC);
+  text-shadow: 0 1px 0 white;
+  border: 1px solid #999;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: 0px 0px 1px #999;
+  -moz-box-shadow: 0px 0px 1px #999;
+  -webkit-box-shadow: 0px 0px 1px #999;
+}
+
+div.DTED_Envelope_Background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  /* Fallback */
+  background: -ms-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+  /* IE10 Consumer Preview */
+  background: -moz-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+  /* Firefox */
+  background: -o-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+  /* Opera */
+  background: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(0, 0, 0, 0.4)));
+  /* Webkit (Safari/Chrome 10) */
+  background: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+  /* Webkit (Chrome 11+) */
+  background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+  /* W3C Markup, IE10 Release Preview */
+}
+
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Container div.DTED_Envelope_Close {
+  top: 10px;
+  background: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  font-size: 21px;
+  color: black;
+  opacity: 0.2;
+}
+div.DTED_Envelope_Wrapper div.DTED_Envelope_Container div.DTED_Envelope_Close:hover {
+  opacity: 1;
 }
